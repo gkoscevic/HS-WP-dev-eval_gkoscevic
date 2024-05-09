@@ -9,6 +9,11 @@
     "start": "parcel watch src/index.js",
     "build": "parcel build src/index.js"
   },
+  "@parcel/transformer-css": {
+    "drafts": {
+      "nesting": true
+    }
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
