@@ -328,11 +328,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 body, main {
+  color: #000;
   font-family: Geist, sans-serif;
 }
 
 .header {
-  border: 1px red;
-  padding: 20px;
+  padding: 22px;
+}
+
+.header__inner {
+  display: flex;
+}
+
+.header__primary, .header__secondary {
+  width: 50%;
+}
+
+.header__secondary {
+  justify-content: end;
+  align-items: center;
+  display: flex;
+}
+
+.header__location-text {
+  font-weight: 700;
+}
+
+.navigation__list {
+  & a {
+    color: #000;
+    cursor: pointer;
+    font-size: 10px;
+    text-decoration: none;
+  }
 }
 /*# sourceMappingURL=index.css.map */
