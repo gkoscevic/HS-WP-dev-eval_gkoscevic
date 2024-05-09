@@ -1,0 +1,338 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1;
+}
+
+a {
+  text-decoration-skip-ink: auto;
+}
+
+a[href^="tel"] {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  outline: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+q {
+  font-style: italic;
+  display: inline;
+}
+
+q:before, q:after {
+  content: "\"";
+  font-style: normal;
+}
+
+textarea, input[type="text"], input[type="button"], input[type="submit"], input[type="reset"], input[type="search"], input[type="password"] {
+  appearance: none;
+  border-radius: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th, td {
+  padding: 2px;
+}
+
+big {
+  font-size: 120%;
+}
+
+small, sup, sub {
+  font-size: 80%;
+}
+
+sup {
+  vertical-align: super;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+dd {
+  margin-left: 20px;
+}
+
+kbd, tt {
+  font-family: courier;
+  font-size: 12px;
+}
+
+ins {
+  text-decoration: underline;
+}
+
+del, strike, s {
+  text-decoration: line-through;
+}
+
+dt {
+  font-weight: bold;
+}
+
+address, cite, var {
+  font-style: italic;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  word-break: normal;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  word-wrap: normal !important;
+  position: absolute !important;
+}
+
+.screen-reader-text:focus {
+  clip-path: none;
+  color: #007acc;
+  z-index: 100000;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  width: auto;
+  height: auto;
+  padding: 15px 23px 14px;
+  font-size: .875rem;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  display: block;
+  top: 5px;
+  right: 5px;
+  box-shadow: 0 0 2px 2px #0009;
+  clip: auto !important;
+}
+
+.skip-link {
+  z-index: 999999999;
+  text-decoration: underline;
+  top: 2.5rem;
+  left: -9999rem;
+}
+
+.skip-link:focus {
+  z-index: 100000;
+  padding: 15px 23px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+  display: block;
+  top: 7px;
+  left: 6px;
+  right: auto;
+}
+
+.visually-hidden:not(:focus):not(:active), .form-allowed-tags:not(:focus):not(:active) {
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url("Geist-Medium.e1906b8e.woff2") format("woff2"), url("Geist-Medium.9cdad2a3.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url("Geist-Black.eda6abfb.woff2") format("woff2"), url("Geist-Black.39371f8b.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url("Geist-Bold.4fc8685d.woff2") format("woff2"), url("Geist-Bold.122eb0c1.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url("Geist-Black.eda6abfb.woff2") format("woff2"), url("Geist-Black.39371f8b.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url("Geist-Regular.14af1f83.woff2") format("woff2"), url("Geist-Regular.d22cfaf5.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url("Geist-SemiBold.164232fa.woff2") format("woff2"), url("Geist-SemiBold.3d1b4734.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url("Geist-Medium.e1906b8e.woff2") format("woff2"), url("Geist-Medium.9cdad2a3.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url("Geist-Bold.4fc8685d.woff2") format("woff2"), url("Geist-Bold.122eb0c1.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url("Geist-Light.f9b3a80f.woff2") format("woff2"), url("Geist-Light.081ee77b.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url("Geist-SemiBold.164232fa.woff2") format("woff2"), url("Geist-SemiBold.3d1b4734.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url("Geist-Light.f9b3a80f.woff2") format("woff2"), url("Geist-Light.081ee77b.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url("Geist-Regular.14af1f83.woff2") format("woff2"), url("Geist-Regular.d22cfaf5.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url("Geist-UltraLight.536dce8b.woff2") format("woff2"), url("Geist-UltraLight.a27828a6.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url("Geist-Thin.7ad17071.woff2") format("woff2"), url("Geist-Thin.36429a69.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist UltraBlack;
+  src: url("Geist-UltraBlack.5126d37c.woff2") format("woff2"), url("Geist-UltraBlack.f36e9731.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist UltraBlack;
+  src: url("Geist-UltraBlack.5126d37c.woff2") format("woff2"), url("Geist-UltraBlack.f36e9731.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url("Geist-Thin.7ad17071.woff2") format("woff2"), url("Geist-Thin.36429a69.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url("Geist-UltraLight.536dce8b.woff2") format("woff2"), url("Geist-UltraLight.a27828a6.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+body, main {
+  font-family: Geist, sans-serif;
+}
+
+.header {
+  border: 1px red;
+  padding: 20px;
+}
+/*# sourceMappingURL=index.css.map */

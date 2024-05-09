@@ -1,0 +1,17 @@
+{
+  "name": "eval",
+  "version": "1.0.0",
+  "description": "HS WP Dev Eval",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rm -r dist/",
+    "start": "parcel watch src/index.js",
+    "build": "parcel build src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.12.0"
+  }
+}
