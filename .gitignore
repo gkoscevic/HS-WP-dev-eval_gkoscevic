@@ -101,3 +101,7 @@ wp-content/plugins/hello.php
 *.asf
 *.wmv
 *.avi
+
+# Theme specific files
+wp-content/themes/eval/node_modules
+wp-content/themes/eval/.parcel-cache
