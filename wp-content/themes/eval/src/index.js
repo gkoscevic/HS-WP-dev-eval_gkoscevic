@@ -1,3 +1,4 @@
-import './styles/index.css';
+// import './styles/index.css';
+import RenderLocation from './scripts/location';
 
-console.log('Parcel is Working!');
+RenderLocation.init();

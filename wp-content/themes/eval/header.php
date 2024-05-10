@@ -13,11 +13,9 @@
     <header class="header" role="banner">
       <div class="header__inner">
         <div class="header__primary">
-          <?php
-	          if(is_front_page() || is_home() || is_front_page() && is_home()) {
-		          echo '<span class="header__location-text">Our Gutters availale in 28205</span>'; // TODO: dynamically output location
-	          }
-          ?>
+          <?php if(is_front_page() || is_home() || is_front_page() && is_home()) { ?>
+		          <span id="location-text" class="header__location-text"></span>
+          <?php } ?>
         </div>
         <div class="header__secondary">
           <nav
