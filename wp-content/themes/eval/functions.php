@@ -197,7 +197,8 @@ function blankslate_comment_count( $count ) {
 			'labels' => $labels,
 			'public' => true,
 			'has_archive' => true,
-			'supports' => array('title', 'editor', 'thumbnail'),
+			'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+			'show_in_rest' => true,
 		);
 
 		register_post_type('gutters', $args); // TODO: why the heck can't I change this
