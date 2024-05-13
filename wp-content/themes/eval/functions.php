@@ -37,10 +37,10 @@ function blankslate_enqueue() {
   wp_enqueue_script( 'jquery' ); // TODO: Do we need jQuery? Could be used for admin functionality?
 
   // enqueue our custom styles
-	wp_enqueue_style( 'parcel', get_stylesheet_directory_uri() . '/dist/index.css', array(), '1.0' );
+	wp_enqueue_style( 'parcel', get_stylesheet_directory_uri() . '/dist/styles/index.css', array(), '1.0' );
 
   // enqueue our custom scripts
-  wp_enqueue_script( 'parcel', get_stylesheet_directory_uri() . '/dist/index.js', array(), '1.0', true );
+  wp_enqueue_script( 'parcel', get_stylesheet_directory_uri() . '/dist/index.min.js', array(), '1.0', true );
 
 }
 

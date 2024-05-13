@@ -7,7 +7,7 @@
 
 const RenderLocation = {
   init: async function () {
-    await this.renderLocationText();
+    await RenderLocation.renderLocationText();
   },
   getLocationData: async function () {
     try {
@@ -32,7 +32,6 @@ const RenderLocation = {
     const locationText = await this.determineLocationText();
     const locationTextElement = document.getElementById('location-text');
     const locationTextNode = document.createTextNode(locationText);
-
     locationTextElement.appendChild(locationTextNode);
   }
 };
