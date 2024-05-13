@@ -4,36 +4,38 @@
 
 .header {
 	padding: 22px;
-}
 
-.header__inner {
-	display: flex;
-}
+	&__inner {
+		display: flex;
+	}
 
-.header__primary,
-.header__secondary {
-	width: 50%;
-}
+	&__primary,
+	&__secondary {
+		width: 50%;
+	}
 
-.header__secondary {
-	display: flex;
-	justify-content: end;
-	align-items: center;
-}
+	&__secondary {
+		display: flex;
+		justify-content: end;
+		align-items: center;
+	}
 
-.header__location-text {
-	font-weight: 700;
+	&__location-text {
+		font-weight: 700;
+	}
 }
 
 /*****************/
 /** NAVIGATIONN **/
 /*****************/
 
-.navigation__list {
-	& a {
-		color: #000;
-		cursor: pointer;
-		text-decoration: none;
-		font-size: 10px;
+.navigation {
+	&__list {
+		& a {
+			color: #000;
+			cursor: pointer;
+			text-decoration: none;
+			font-size: 10px;
+		}
 	}
 }
