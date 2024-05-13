@@ -181,3 +181,26 @@ function blankslate_comment_count( $count ) {
     return $count;
   }
 }
+
+/**
+ * Custom Post Type for Inventory (i.e gutters)
+ *
+ */
+	function custom_post_type_gutters() {
+		$labels = array(
+			'name' => 'Gutters',
+			'singular_name' => 'Gutter',
+			'menu_name' => 'Gutters'
+		);
+
+		$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'has_archive' => true,
+			'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+			'show_in_rest' => true,
+		);
+
+		register_post_type('gutters', $args); // TODO: why the heck can't I change this
+	}
+	add_action('init', 'custom_post_type_gutters');

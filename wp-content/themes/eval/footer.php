@@ -3,7 +3,7 @@
 <footer id="footer" role="contentinfo" class="footer">
   <div class="footer__primary">
     <div id="copyright">
-		  <?php echo esc_html( get_bloginfo( 'name' ) ); ?>
+			<?php echo esc_html( get_bloginfo( 'name' ) ); ?>
     </div>
   </div>
   <div class="footer__secondary">
@@ -13,10 +13,10 @@
       role="navigation"
       itemscope
       itemtype="https://schema.org/SiteNavigationElement">
-		  <?php wp_nav_menu([
-			  'theme_location' => 'main-menu',
-			  'menu_class' => 'navigation__list',
-		  ]); ?>
+			<?php wp_nav_menu([
+				'theme_location' => 'main-menu',
+				'menu_class' => 'navigation__list',
+			]); ?>
     </nav>
   </div>
 </footer>
