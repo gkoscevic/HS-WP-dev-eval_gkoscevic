@@ -1,0 +1,16 @@
+.footer {
+	background-color: #1F2937;
+	color: #FBFCFD;
+	padding: 45px;
+	display: flex;
+
+	&__primary,
+	&__secondary {
+		width: 50%;
+	}
+
+	&__secondary {
+		display: flex;
+		justify-content: end;
+	}
+}

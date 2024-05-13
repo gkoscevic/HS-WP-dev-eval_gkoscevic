@@ -39,3 +39,9 @@
 		}
 	}
 }
+
+.navigation--footer {
+	a {
+		color: #FBFCFD;
+	}
+}
