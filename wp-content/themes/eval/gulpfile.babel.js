@@ -26,6 +26,9 @@ export const buildStyles = () => src(`${dirs.src}/styles/index.css`)
   .pipe(postcss([cssImport, cssvars, nested, autoprefixer]))
   .pipe(dest(`${dirs.dist}/styles`))
 
+export const moveFonts = () => src(`${dirs.src}/fonts/*.*`)
+  .pipe(dest(`${dirs.dist}/fonts`))
+
 export const devWatch = () => {
   watch(sources.styles, buildStyles);
   watch(sources.scripts, buildScripts);
