@@ -9,6 +9,7 @@ import webpack from 'webpack-stream';
 import exec from 'gulp-exec';
 import gulpif from 'gulp-if';
 import cssnano from 'gulp-cssnano';
+import sourcemaps from 'gulp-sourcemaps';
 
 const env = process.env.NODE_ENV;
 const isProduction = env === 'production';
@@ -32,12 +33,14 @@ export const buildScripts = () => src(sources.scripts)
 
 // run CSS through postcss and bundle
 export const buildStyles = () => src(`${dirs.src}/styles/index.css`)
+  .pipe(gulpif(!isProduction, sourcemaps.init()))
   .pipe(postcss([cssImport, cssvars, nested, autoprefixer]))
   .on('error', (errorInfo) => {  // if the error event is triggered, do something
     console.log(errorInfo.toString()); // show the error information
     this.emit('end'); // tell gulp that the task is ended gracefully and resume
   })
   .pipe(gulpif(isProduction, cssnano())) // only minify css in production build
+  .pipe(gulpif(!isProduction, sourcemaps.write('.')))
   .pipe(dest(`${dirs.dist}/styles`))
 
 // move fonts from src to dist
