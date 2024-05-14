@@ -15,6 +15,10 @@ I utilized Gulp to watch and serve my assets. For CSS, this was as simple as uti
 
 Initially I tried to use parceljs to bundle my assets, but it was not as out-of-the-box as I thought it would be and I think this was mainly due to working within a WordPress site. Gulp proved to be a lot more straightforward and easy to work with, if I wanted to spend more time on this piece I would've added tasks to handle performance optimizations during the build process along with handling our assets differently based on the environment we were building for.
 
+#### Missing functionality from build system
+1. There's no live reload on this currently. I would've liked to spend more time on this to figure out a way to implement hot reloading for the WordPress site
+2. If this project would be in production I'd like to add the bundler analyzer from webpack to keep track of our JS build size for performance
+
 ## WordPress Functionality and Theme Setup
 
 ### Header
@@ -36,15 +40,11 @@ Initially I tried to use parceljs to bundle my assets, but it was not as out-of-
 2. Run `docker-compose up` from the root of the project
 3. Visit `http://localhost` in your browser to access the site
 
-### Running Gulp for Development
+### Theme Set up
 1. `cd` into the root of the theme `cd wp-content/themes/eval/`
 2. Run `npm install`
-3. Run `gulp`, this command will watch all `.js` and `.css` files
-
-### Serving assets
-1. `cd` into the root of the theme `cd wp-content/themes/eval/`
-2. Run `npm install`
-3. Run `gulp serve`, this command will bundle all `.js` and `.css` files and move them to the `/dist` folder 
+3. Run `npm start` to start the development task (this will build and watch all `.js` and `.css` files)
+4. Run `npm run build` to build all assets for productions
 
 
 
