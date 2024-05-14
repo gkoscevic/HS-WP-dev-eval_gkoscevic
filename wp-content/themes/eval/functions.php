@@ -45,7 +45,7 @@ function blankslate_enqueue() {
 	wp_enqueue_style( 'styles', get_stylesheet_directory_uri() . '/dist/styles/index.css', array(), '1.0' );
 
   // enqueue our custom scripts
-  wp_enqueue_script( 'javascript', get_stylesheet_directory_uri() . '/dist/index.min.js', array(), '1.0', true );
+  wp_enqueue_script( 'javascript', get_stylesheet_directory_uri() . '/dist/index.js', array(), '1.0', true );
 
 }
 
