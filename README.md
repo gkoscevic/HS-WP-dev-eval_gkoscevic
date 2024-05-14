@@ -44,6 +44,7 @@ To transpile my JavaScript I used Webpack with a very basic `webpack.config` fil
 1. Clone the repository
 2. Run `docker-compose up` from the root of the project
 3. Visit `http://localhost` in your browser to access the site
+4. Visit `http://localhost/wp-admin` using these credentials: username=admin password=password to access the admin panel
 
 ### Theme Set up
 1. `cd` into the root of the theme `cd wp-content/themes/eval/`
