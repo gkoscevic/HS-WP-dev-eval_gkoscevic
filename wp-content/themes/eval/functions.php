@@ -15,7 +15,12 @@ function blankslate_setup() {
     $content_width = 1920;
   }
 
-  register_nav_menus( array( 'main-menu' => esc_html__( 'Main Menu', 'blankslate' ) ) );
+  register_nav_menus(
+    array(
+      'main-menu' => esc_html__( 'Main Menu', 'blankslate' ),
+      'footer-menu' => 'Footer Menu',
+    )
+  );
 }
 add_action( 'admin_notices', 'blankslate_notice' );
 function blankslate_notice() {

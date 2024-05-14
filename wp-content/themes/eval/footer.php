@@ -14,7 +14,7 @@
       itemscope
       itemtype="https://schema.org/SiteNavigationElement">
 			<?php wp_nav_menu([
-				'theme_location' => 'main-menu',
+				'theme_location' => 'footer-menu',
 				'menu_class' => 'navigation__list',
 			]); ?>
     </nav>
