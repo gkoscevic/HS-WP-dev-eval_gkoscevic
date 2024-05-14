@@ -29,11 +29,12 @@ const RenderLocation = {
     return 'No gutters available in your area';
   },
   renderLocationText: async function () {
-    const locationText = await this.determineLocationText();
     const locationTextElement = document.getElementById('location-text');
+    if (!locationTextElement) return false;
+    
+    const locationText = await this.determineLocationText();
     const locationTextNode = document.createTextNode(locationText);
 
-    if (!locationTextElement) return false;
 
     locationTextElement.appendChild(locationTextNode);
   }
