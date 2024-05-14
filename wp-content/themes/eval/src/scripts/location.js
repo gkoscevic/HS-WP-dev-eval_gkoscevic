@@ -32,6 +32,9 @@ const RenderLocation = {
     const locationText = await this.determineLocationText();
     const locationTextElement = document.getElementById('location-text');
     const locationTextNode = document.createTextNode(locationText);
+
+    if (!locationTextElement) return false;
+
     locationTextElement.appendChild(locationTextNode);
   }
 };
