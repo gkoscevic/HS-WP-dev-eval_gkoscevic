@@ -14,11 +14,15 @@
 	    ?>
 	    <?php if ($myQuery->have_posts()) : ?>
 		    <?php while ($myQuery->have_posts()) : $myQuery->the_post(); ?>
-          <article class="gutters-display__item">
+          <?php
+			      $slug = get_post_field( 'post_name', get_the_ID() );
+            $postLink = '/gutters/'.$slug;
+          ?>
+          <a href="<?php echo $postLink ?>" class="gutters-display__item">
             <div class="gutters-display__item-image"><?php echo the_post_thumbnail(); ?></div>
             <h3 class="gutters-display__item-title"><?php echo the_title(); ?></h3>
             <p class="gutters-display__item-caption"><?php echo the_post_thumbnail_caption(); ?></p>
-          </article>
+          </a>
 		    <?php endwhile;  wp_reset_postdata(); ?>
 	    <?php endif; ?>
     </div>
