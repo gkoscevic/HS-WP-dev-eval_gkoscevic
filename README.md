@@ -11,9 +11,14 @@ If this was something my team and I had to do as a project I'd recommend we use 
 For my JavaScript setup I kept it as barebones as possible. The only functionality I completed was outputting the user's postal code based on their IP address. For this, I used the Fetch API to hit the ipapi and return the user's location data, all of this functionality can be found in `eval/src/scripts/location.js`
 
 ### Build Process
-I utilized Gulp to watch and serve my assets. For CSS, this was as simple as utilizing gulp's postcss plugins. To transpile my JavaScript I used Webpack with a very basic `webpack.config` file.
+I utilized Gulp to watch and serve my assets. Initially I tried to use parceljs to bundle my assets, but it was not as out-of-the-box as I thought it would be and I think this was mainly due to working within a WordPress site. Gulp proved to be a lot more straightforward and easy to work with.
 
-Initially I tried to use parceljs to bundle my assets, but it was not as out-of-the-box as I thought it would be and I think this was mainly due to working within a WordPress site. Gulp proved to be a lot more straightforward and easy to work with, if I wanted to spend more time on this piece I would've added tasks to handle performance optimizations during the build process along with handling our assets differently based on the environment we were building for.
+#### CSS
+I used gulp's postcss plugin to pipe my CSS in and run it through various plugins for additional features such as supporting css imports, nesting, and autoprefixing. I also conditionally enable sourcemaps when not building for production. When we are building for production I utilized `gulp-if` to minify all CSS for performance.
+
+#### JavaScript
+To transpile my JavaScript I used Webpack with a very basic `webpack.config` file. To me, this was the best way to bundle and transpile my JS while also giving us flexibility to expand upon our build system down the road. Just like with my CSS, when we are building for production webpack will automatically minify our JS file.
+
 
 #### Missing functionality from build system
 1. There's no live reload on this currently. I would've liked to spend more time on this to figure out a way to implement hot reloading for the WordPress site
