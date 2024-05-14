@@ -25,7 +25,26 @@ Initially I tried to use parceljs to bundle my assets, but it was not as out-of-
 * Testimonials 
   * Based on time constraints, I wasn't able to complete this portion of the home page, but I did want to outline how I would go about accomplishing this. To render testimonials for the user I would've set up a custom-post-type that would've allowed an admin user to enter the name, review and product picture for each customer's testimony. To render this on the home page I would've used a simple `WP_Query` to retrieve the testimonials and then loop over them to output them on the page.
 
-### Single Gutter Page
+## Project Set Up
+
+### Prerequisites
+- [Docker](https://www.docker.com/get-started)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
+### Starting the Server
+1. Clone the repository
+2. Run `docker-compose up` from the root of the project
+3. Visit `http://localhost` in your browser to access the site
+
+### Running Gulp for Development
+1. `cd` into the root of the theme `cd wp-content/themes/eval/`
+2. Run `npm install`
+3. Run `gulp`, this command will watch all `.js` and `.css` files
+
+### Serving assets
+1. `cd` into the root of the theme `cd wp-content/themes/eval/`
+2. Run `npm install`
+3. Run `gulp serve`, this command will bundle all `.js` and `.css` files and move them to the `/dist` folder 
 
 
 
