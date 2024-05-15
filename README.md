@@ -8,7 +8,7 @@ I kept it very simple with my CSS for this project. I used postcss to allow for 
 If this was something my team and I had to do as a project I'd recommend we use CSS modules in combination with postcss. This would give us access to all the modern functionality of CSS as well as being able to scope our CSS files and class declarations into modules. 
 
 ### Javascript
-For my JavaScript setup I kept it as barebones as possible. The only functionality I completed was outputting the user's postal code based on their IP address. For this, I used the Fetch API to hit the ipapi and return the user's location data, all of this functionality can be found in `eval/src/scripts/location.js`
+The only functionality I completed that required JavaScript was outputting the user's postal code based on their IP address. For this, I used the Fetch API to hit the `ipapi` and return the user's location data, all of this functionality can be found in `eval/src/scripts/location.js`
 
 ### Build Process
 I utilized Gulp to watch and serve my assets. Initially I tried to use parceljs to bundle my assets, but it was not as out-of-the-box as I thought it would be and I think this was mainly due to working within a WordPress site. Gulp proved to be a lot more straightforward and easy to work with.
@@ -31,8 +31,12 @@ To transpile my JavaScript I used Webpack with a very basic `webpack.config` fil
     * Right now all we are doing is outputting the postal code based on a user's IP. If we were doing this project in production for a real partner I would suggest we utilize categories or tags in the `Gutters` custom post type to define which gutters are available (or not-available) in certain locations. At this point we could use that taxonomy in conjunction with the user's location data to give the user an accurate availability.
 
 ### Home Page
+* PHP structure and functionality
+   * The home page is fairly static at the moment. The main hero is all customizable within the admin and so is each Gutter within the Gutter post type. However, after working through the site and discovering Gutenberg blocks I would've leveraged those to build out the entire homepage within the admin editor and utilize custom `shortcodes` and Gutenberg blocks to allow the editor to add and edit dynamic pieces of the page such as the "Types of Gutters" and "Testimonials" section.
 * Testimonials 
-  * Based on time constraints, I wasn't able to complete this portion of the home page, but I did want to outline how I would go about accomplishing this. To render testimonials for the user I would've set up a custom-post-type that would've allowed an admin user to enter the name, review and product picture for each customer's testimony. To render this on the home page I would've used a simple `WP_Query` to retrieve the testimonials and then loop over them to output them on the page.
+  * Based on time constraints, I wasn't able to complete this portion of the home page, but I did want to outline how I would go about accomplishing this.
+  * To render testimonials for the user I would set up a custom-post-type that would allow a content editor to enter the name, review and product picture for each customer's testimony.
+  * To output these testimonials on the homepage I would've created a custom `shortcode` to allow for injecting the content from within the page editor
 
 ## Project Set Up
 
